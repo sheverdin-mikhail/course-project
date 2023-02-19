@@ -1,8 +1,9 @@
 .nav {
-    padding: 20px 50px;
+    padding: 0 50px;
     background: var(--inverted-bg-color);
     display: flex;
     align-items: center;
+    height: var(--navbar-height);
 }
 
 .firstLink {
