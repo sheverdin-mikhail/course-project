@@ -7,7 +7,7 @@ import webpack  from 'webpack';
 
 
 
-export function buildPlugins({paths}: BuildOptions): webpack.WebpackPluginInstance[]{
+export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPluginInstance[]{
 
 
     return [
@@ -18,6 +18,9 @@ export function buildPlugins({paths}: BuildOptions): webpack.WebpackPluginInstan
         new MiniCssExtractPlugin({
             filename: 'css/[name].[contenthash:8].css',
             chunkFilename: 'css/[name].[contenthash:8].css',
+        }),
+        new webpack.DefinePlugin({
+          __IS__DEV__: JSON.stringify(isDev)
         })
       ]
 }

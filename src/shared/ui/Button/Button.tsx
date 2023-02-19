@@ -7,8 +7,9 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     theme?: ThemeButton;
 }
 
-const enum ThemeButton {
-    CLEAR = 'clear'
+export const enum ThemeButton {
+    CLEAR = 'clear',
+    BORDER = 'border',
 }
 
 export const Button: React.FC<ButtonProps> = (props) => {
