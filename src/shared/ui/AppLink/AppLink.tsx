@@ -11,6 +11,7 @@ export enum AppLinkTheme {
 interface AppLinkProps extends LinkProps {
     className?: string;
     theme?: AppLinkTheme;
+    active?: boolean;
 }
 
 export const AppLink: React.FC<AppLinkProps> = (props) => {
@@ -18,6 +19,7 @@ export const AppLink: React.FC<AppLinkProps> = (props) => {
         className, 
         children, 
         to, 
+        active=false,
         theme = AppLinkTheme.PRIMARY, 
         ...otherProps 
     } = props;
@@ -25,7 +27,7 @@ export const AppLink: React.FC<AppLinkProps> = (props) => {
     return (
         <Link 
             to={to} 
-            className={classNames(cls.AppLink, {}, [className, cls[theme]])}
+            className={classNames(cls.AppLink, {[cls.active]: active}, [className, cls[theme]])}
             {...otherProps}
         >
             {children}

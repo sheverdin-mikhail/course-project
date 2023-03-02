@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher/ThemeSwitcher'
@@ -15,12 +15,33 @@ interface NavbarProps {
 export const Navbar = () => {
 
   const {t} = useTranslation()
+  const {pathname} = useLocation()
 
   return (
     <nav className={classNames(cls.nav)}>
         <div className={cls.links}>
-            <AppLink className={cls.firstLink} theme={AppLinkTheme.SECONDARY} to={"/"}>{t('nav-main')}</AppLink>
-            <AppLink to={"/about"} >{t('nav-about-us')}</AppLink>
+            <AppLink 
+              className={cls.firstLink}
+              to={"/"} 
+              active = {
+                pathname==='/'
+                ? true
+                : false
+              }   
+            >
+              {t('nav-main')}
+            </AppLink>
+
+            <AppLink 
+              active = {
+                pathname==='/about'
+                ? true
+                : false
+              }  
+              to={"/about"} 
+            >
+              {t('nav-about-us')}
+            </AppLink>
         </div>
     </nav>
   )
