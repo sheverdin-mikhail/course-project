@@ -4,7 +4,7 @@ import cls from './Button.module.scss';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     className?: string;
-    theme?: ThemeButton;
+    theme?: string;
 }
 
 export const enum ThemeButton {
@@ -13,16 +13,20 @@ export const enum ThemeButton {
 }
 
 export const Button: React.FC<ButtonProps> = (props) => {
-    const { 
+    const {
         className,
         children,
-        theme=ThemeButton.CLEAR,
+        theme = ThemeButton.CLEAR,
         ...otherProps
     } = props;
 
     return (
-        <button className={classNames(cls.button, {}, [cls[theme], className])} {...otherProps}>
+        <button
+            type="button"
+            className={classNames(cls.button, {}, [cls[theme], className])}
+            {...otherProps}
+        >
             {children}
         </button>
- );
-}
+    );
+};
