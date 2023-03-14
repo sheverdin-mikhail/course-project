@@ -8,6 +8,7 @@ module.exports = {
         'plugin:react/recommended',
         'airbnb',
         'plugin:i18next/recommended',
+        'plugin:react/jsx-runtime',
     ],
     overrides: [
     ],
@@ -47,6 +48,7 @@ module.exports = {
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': ['error', { markupOnly: true }],
         'max-len': [2, { ignoreComments: true }],
+        'no-undef': 'warn',
 
     },
     globals: {
