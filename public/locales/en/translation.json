@@ -2,5 +2,8 @@
   "language": "Русский",
   "nav-main": "Main page",
   "nav-about-us": "About us",
-  "404-page-not-found": "404 Page Not Found"
+  "404-page-not-found": "404 Page Not Found",
+  "proizoshla-nepredvidennaya-oshibka": "Something went wrong",
+  "pozhaluista-perezagruzite-stranicu": "Please reload the Page",
+  "throw-the-error": "Throw the  error"
 }

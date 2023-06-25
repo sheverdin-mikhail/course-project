@@ -2,5 +2,9 @@
   "language": "English",
   "nav-about-us": "О нас",
   "nav-main": "Главная",
-  "404-page-not-found": "404 Страница не найдена"
+  "404-page-not-found": "404 Страница не найдена",
+  "proizoshla-nepredvidennaya-oshibka": "Произлшла непредвиденная ошибка",
+  "pozhaluista-perezagruzite-stranicu": "Пожалуйста перезагрузите страницу",
+  "throw-the-error": "Выбросить ошибку"
+
 }
