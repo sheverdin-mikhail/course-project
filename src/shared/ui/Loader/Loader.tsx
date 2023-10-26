@@ -5,7 +5,7 @@ interface LoaderProps {
     className?: string;
 }
 
-export const Loader: React.FC<LoaderProps> = (props) => (
+export const Loader: React.FC<LoaderProps> = () => (
 // const { className } = props;
 
     <div className={classNames('lds-spinner', {}, [])}>
