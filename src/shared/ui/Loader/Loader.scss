@@ -1,4 +1,3 @@
-
 .lds-spinner {
     color: official;
     display: inline-block;
@@ -11,7 +10,7 @@
     transform-origin: 40px 40px;
     animation: lds-spinner 1.2s linear infinite;
 }
-  
+
 .lds-spinner div::after {
     content: " ";
     display: block;
@@ -93,4 +92,3 @@
         opacity: 0;
     }
 }
-  
