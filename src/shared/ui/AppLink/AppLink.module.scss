@@ -1,12 +1,22 @@
-.AppLink{
+.AppLink {
     text-decoration: none;
 }
 
-
-.primary{
+.primary {
     color: var(--inverted-primary-color);
 }
 
-.active{
+.secondary {
     color: var(--inverted-secondary-color);
+}
+
+.active {
+    color: var(--inverted-secondary-color);
+
+    &.primary {
+        color: var(--inverted-secondary-color);
+    }
+    &.secondary {
+        color: var(--inverted-primary-color);
+    }
 }

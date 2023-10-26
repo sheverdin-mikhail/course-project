@@ -1,12 +1,10 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { withThemes } from 'storybook-addon-themes/react';
 import { Button, ThemeButton } from './Button';
 
 export default {
     title: 'shared/Button',
     component: Button,
-    decorators: [withThemes],
     argTypes: {
         backgroundColor: { control: 'color' },
     },
