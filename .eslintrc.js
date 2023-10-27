@@ -21,7 +21,7 @@ module.exports = {
         'react/jsx-props-no-spreading': 'off',
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
-        'no-unused-vars': ['warn', { varsIgnorePattern: '_' }],
+        'no-unused-vars': ['warn', { varsIgnorePattern: '__' }],
         'react/require-default-props': 'off',
         'react/react-in-jsx-scope': 'off',
         'quote-props': ['error', 'as-needed'],

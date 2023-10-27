@@ -1,7 +1,7 @@
 import { useTheme } from 'app/providers/ThemeProvider';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import { ButtonTheme, Button } from 'shared/ui/Button/Button';
 import cls from './PageError.module.scss';
 
 interface PageErrorProps {
@@ -18,7 +18,7 @@ export const PageError: React.FC<PageErrorProps> = (props) => {
             <div className={classNames(cls.pageError, {}, [className ?? ''])}>
                 <h2>{t('proizoshla-nepredvidennaya-oshibka')}</h2>
                 <Button
-                    theme={ThemeButton.BORDER}
+                    theme={ButtonTheme.BORDER}
                     // eslint-disable-next-line no-restricted-globals
                     onClick={() => location.reload()}
                 >

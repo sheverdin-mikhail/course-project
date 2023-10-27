@@ -8,32 +8,8 @@ interface NavbarProps {
     className: string;
 }
 
-export const Navbar = () => {
-    const { t } = useTranslation();
-    const { pathname } = useLocation();
-
-    return (
-        <nav className={classNames(cls.nav)}>
-            <div className={cls.links}>
-                <AppLink
-                    className={cls.firstLink}
-                    to="/"
-                    active={
-                        pathname === '/'
-                    }
-                >
-                    {t('nav-main')}
-                </AppLink>
-
-                <AppLink
-                    active={
-                        pathname === '/about'
-                    }
-                    to="/about"
-                >
-                    {t('nav-about-us')}
-                </AppLink>
-            </div>
-        </nav>
-    );
-};
+export const Navbar = () => (
+    <nav className={classNames(cls.nav)}>
+        <div className={cls.links} />
+    </nav>
+);

@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
-import React, { ReactNode } from 'react';
-import { I18nextProvider, withTranslation } from 'react-i18next';
+import { ReactNode } from 'react';
+import { I18nextProvider } from 'react-i18next';
 import i18nForTests from 'shared/config/i18n/i18nForTests';
 
 export const renderWithTranslation = (component: ReactNode) => {
@@ -9,4 +9,4 @@ export const renderWithTranslation = (component: ReactNode) => {
             {component}
         </I18nextProvider>,
     );
-}
+};

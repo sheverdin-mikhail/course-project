@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button, ThemeButton } from 'shared/ui/Button/Button';
+import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 
 export const BugButton: React.FC = () => {
     const [error, setError] = useState(false);
@@ -14,7 +14,7 @@ export const BugButton: React.FC = () => {
 
     return (
         <Button
-            theme={ThemeButton.BORDER}
+            theme={ButtonTheme.BORDER}
             onClick={() => setError((prev) => !prev)}
         >
             {t('throw-the-error')}
